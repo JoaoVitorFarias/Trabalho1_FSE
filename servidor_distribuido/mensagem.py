@@ -33,7 +33,7 @@ def enviar_mensagem_qnt_carros(qnt_carros_principal, qnt_carros_aux, velocidade_
         socket_distribuido.enviar_msg(msg, socket_distribuido.socket_cruzamento2)
 
 
-def enviar_mensagem_infracao_velocidade(qnt_infracao):
+def enviar_mensagem_infracao_velocidade(qnt_infracao, cruzamento):
     msg = {
         'tipo': 2,
         'infracao_velocidade': qnt_infracao
@@ -45,7 +45,7 @@ def enviar_mensagem_infracao_velocidade(qnt_infracao):
     if (cruzamento['semaforo_verde1'] == 2):
         socket_distribuido.enviar_msg(msg, socket_distribuido.socket_cruzamento2)
 
-def enviar_mensagem_infracao_semaforo(qnt_infracao):
+def enviar_mensagem_infracao_semaforo(qnt_infracao, cruzamento):
     msg = {
         'tipo': 3,
         'infracao_semaforo': qnt_infracao

@@ -77,18 +77,20 @@ def alertar_via_aux(cruzamento):
 def modo_noturno(cruzamento):
     # via principal
     GPIO.output(cruzamento['semaforo_verde2'], GPIO.LOW)
+    GPIO.output(cruzamento['semaforo_amrelo2'], GPIO.LOW)
     GPIO.output(cruzamento['semaforo_vermelho2'], GPIO.LOW)
 
     # via aux
     GPIO.output(cruzamento['semaforo_verde1'], GPIO.LOW)
+    GPIO.output(cruzamento['semaforo_amrelo1'], GPIO.LOW)
     GPIO.output(cruzamento['semaforo_vermelho1'], GPIO.LOW)
 
-    # piscar semaforo
+    sleep(1)
     GPIO.output(cruzamento['semaforo_amrelo1'], GPIO.HIGH)
     GPIO.output(cruzamento['semaforo_amrelo2'], GPIO.HIGH)
     sleep(1)
-    GPIO.output(cruzamento['semaforo_amrelo1'], GPIO.LOW)
-    GPIO.output(cruzamento['semaforo_amrelo2'], GPIO.LOW)
+    
+    
 
 def iniciar_semaforo(cruzamento):
     GPIO.setmode(GPIO.BCM)

@@ -80,7 +80,7 @@ class Menu:
     
     def desativar_modo_noturno(self):
         while True:
-            print("Desativar modo noturno\n\n")
+            print("Desativar modo noturno\n")
             print("1 - Sim\n")
             opcao_destivar = int(input(""))
             if (opcao_destivar == 1):
@@ -89,7 +89,7 @@ class Menu:
 
     def desativar_modo_emergencia(self):
         while True:
-            print("Desativar modo de emergência\n\n")
+            print("Desativar modo de emergência\n")
             print("1 - Sim\n")
             opcao_destivar = int(input(""))
             if (opcao_destivar == 1):

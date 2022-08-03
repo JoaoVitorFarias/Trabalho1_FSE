@@ -36,7 +36,7 @@ def controlar_via_principal(cruzamento):
 
     # cronômetro
     while (tempo_max > 0):
-        sleep(0.8)
+        sleep(0.7)
         tempo_max = tempo_max - 1
 
         if(botao_pedestre.verificar_botao_acionado(cruzamento['botao_pedestre2'])
@@ -71,6 +71,7 @@ def controlar_via_principal(cruzamento):
         if(modo_emergencia):
             ativar_modo_emergencia(cruzamento)
         
+        
         if((tempo_max % 2) == 0):
             qnt_carros = int(controle_sensor1.qnt_carros + controle_sensor2.qnt_carros)
             if ((controle_sensor1.qnt_carros + controle_sensor2.qnt_carros) == 0):
@@ -78,12 +79,12 @@ def controlar_via_principal(cruzamento):
             else:
                 velocida_media = (controle_sensor1.velocidade_total + controle_sensor2.velocidade_total)/(controle_sensor1.qnt_carros + controle_sensor2.qnt_carros)
             mensagem.enviar_mensagem_qnt_carros(qnt_carros, 0, velocida_media, cruzamento)
-    
+
     semaforo.alertar_via_principal(cruzamento)
     sleep(3)
 
     qnt_infracao = int(controle_sensor1.qnt_infracao + controle_sensor2.qnt_infracao)
-    mensagem.enviar_mensagem_infracao_velocidade(qnt_infracao)
+    mensagem.enviar_mensagem_infracao_velocidade(qnt_infracao, cruzamento)
 
 
 def controlar_via_aux(cruzamento):
@@ -99,7 +100,7 @@ def controlar_via_aux(cruzamento):
 
     # cronômetro
     while (tempo_max > 0):
-        sleep(0.8)
+        sleep(0.7)
         tempo_max = tempo_max - 1
 
         if(botao_pedestre.verificar_botao_acionado(cruzamento['botao_pedestre1'])
@@ -151,7 +152,7 @@ def controlar_via_aux(cruzamento):
     sleep(3)
 
     qnt_infracao = int(controle_sensor1.qnt_infracao + controle_sensor2.qnt_infracao)
-    mensagem.enviar_mensagem_infracao_semaforo(qnt_infracao)
+    mensagem.enviar_mensagem_infracao_semaforo(qnt_infracao, cruzamento)
 
 def controlar_semaforo(cruzamento):
     while True:
