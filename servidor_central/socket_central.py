@@ -107,10 +107,7 @@ def iniciar_socket(host, port, id_cruzamento):
 
 
 def enviar_msg(msg, socket):
-    print("ola")
-
     try:
-        print("ola")
         socket.send(bytes((json.dumps(msg)),encoding="utf-8"))
         sleep(1)
     except (BrokenPipeError):

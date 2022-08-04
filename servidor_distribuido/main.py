@@ -62,11 +62,4 @@ if __name__ == "__main__":
     thread_socket2.start()
     thread_cruzamento1.start()
     thread_cruzamento2.start()
-
-    #thread_socket1.join()
-    #thread_socket2.join()
-    #thread_cruzamento1.join()
-    #thread_cruzamento2.join()
-
-
-
+    

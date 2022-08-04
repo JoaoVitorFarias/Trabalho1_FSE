@@ -23,9 +23,3 @@ if __name__ == "__main__":
     thread_cruzamento3.start()
     thread_cruzamento4.start()
     thread_menu.start()
-
-    #thread_cruzamento1.join()
-    #thread_cruzamento2.join()
-    #thread_cruzamento3.join()
-    #thread_cruzamento4.join()
-    #thread_menu.join()
