@@ -1,6 +1,6 @@
 # FSE: Trabalho 1
 
-Trabalho 1 da disciplina de Fundamentos de Sistemas Embarcados (2022/1)
+Trabalho 1 da disciplina de Fundamentos de Sistemas Embarcados (2022/1).
 
 ## Descrição
 
@@ -41,6 +41,10 @@ Na pasta é necessário executar o arquivo **main.py**, além de informar o IP d
 
 exemplo: ``` python main.py 164.41.98.26 10243 10244 ``` 
 
-Obs.: Por conta dos 4 cruzamentos estarem divididos em duas placas, cada instância do servidor distribuído só recebe duas portas por parâmetro
+Por conta dos 4 cruzamentos estarem divididos em duas placas, cada instância do servidor distribuído só recebe duas portas por parâmetro.
+
+Obs.: Não foi adicionado o alarme para quando ocorre alguma infração.
+
+
 
 

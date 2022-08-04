@@ -89,8 +89,6 @@ def modo_noturno(cruzamento):
     GPIO.output(cruzamento['semaforo_amrelo1'], GPIO.HIGH)
     GPIO.output(cruzamento['semaforo_amrelo2'], GPIO.HIGH)
     sleep(1)
-    
-    
 
 def iniciar_semaforo(cruzamento):
     GPIO.setmode(GPIO.BCM)

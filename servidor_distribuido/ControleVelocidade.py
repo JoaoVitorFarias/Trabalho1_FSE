@@ -1,9 +1,6 @@
 import RPi.GPIO as GPIO
 import time
 
-'''
-adicionar alarme
-'''
 class ControleVelocidade:
 
     def __init__(self, sensorA, sensorB):
@@ -66,6 +63,6 @@ class ControleVelocidade:
     
     def adicionar_infracao(self):
         self.qnt_infracao += 1
-        # adicionar buzzer
+
 
 

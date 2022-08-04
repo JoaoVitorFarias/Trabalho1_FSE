@@ -103,12 +103,12 @@ def iniciar_socket(host, port, id_cruzamento):
                     mensagem.imprimir_mensagem(msg)
                     sleep(1)
     except:
-            print("socket error - conexão")
+        print("socket error - conexão")
 
 
 def enviar_msg(msg, socket):
     try:
         socket.send(bytes((json.dumps(msg)),encoding="utf-8"))
         sleep(1)
-    except (BrokenPipeError):
-            print("socket error - envio de mensagem")
+    except:
+        print("socket error - envio de mensagem")

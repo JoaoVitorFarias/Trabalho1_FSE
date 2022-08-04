@@ -6,8 +6,6 @@ from ControleVelocidade import ControleVelocidade
 import sensor_velocidade
 import mensagem
 
-#adiconar chamdas de envio de mensagens
-
 modo_noturno = False
 modo_emergencia = False
 

@@ -1,10 +1,6 @@
 import socket_distribuido
 import cruzamento
 
-'''
-adicionar metodos para o envio de mensagem
-'''
-
 def verificar_mensagem(msg):
     if(msg['modo_noturno'] == 1):
         cruzamento.modo_noturno = True

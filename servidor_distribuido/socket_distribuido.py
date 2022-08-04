@@ -3,10 +3,8 @@ import json
 import mensagem
 from time import sleep
 
-
 socket_cruzamento1 = None
 socket_cruzamento2 = None
-
 
 def monitorar_socket(socket):
     while True:
@@ -32,13 +30,13 @@ def iniciar_socket(host, port, id_cruzamento):
 
             monitorar_socket(socket_cruzamento2)
     except:
-            print("socket error - conexão")
+        print("socket error - conexão")
 
 
 def enviar_msg(msg, socket):
     try:
         socket.send(bytes((json.dumps(msg)),encoding="utf-8"))
         sleep(1)
-    except(BrokenPipeError):
+    except:
         print("socket error - envio de mensagem")
         
