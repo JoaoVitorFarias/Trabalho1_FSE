@@ -7,8 +7,8 @@ class Menu:
 
     def menu_principal(self):
         while True:
-            print("===== MENU =====\n\n")
-            print("1 - Monitoramento dos semáforos\n")
+            print("===== MENU =====\n")
+            print("1 - Monitoramento dos semáforos")
             print("2 - Acionamento do modos noturno ou de emergência\n")
             self.opcao  = int(input("Selecione uma das opções: "))
             if (self.opcao  == 1):
@@ -19,9 +19,9 @@ class Menu:
     
     def menu_modos(self):
         while True:
-            print("===== MENU =====\n\n")
-            print("1 - Modo noturno\n")
-            print("2 - Modo emergência\n")
+            print("===== MENU =====\n")
+            print("1 - Modo noturno")
+            print("2 - Modo emergência")
             print("3 - Voltar\n")
             self.opcao = int(input("Selecione uma das opções: ")) 
             if (self.opcao == 1): 
@@ -33,10 +33,10 @@ class Menu:
     
     def menu_modo_noturno(self):
         while True:
-            print("===== MODO NOTURNO =====\n\n")
-            print("1 - Todos cruzamentos\n")
-            print("2 - Cruzamentos 1 e 2\n")
-            print("3 - Cruzamentos 3 e 4\n")
+            print("===== MODO NOTURNO =====\n")
+            print("1 - Todos cruzamentos")
+            print("2 - Cruzamentos 1 e 2")
+            print("3 - Cruzamentos 3 e 4")
             print("4 - Voltar\n")
             self.opcao = int(input("Selecione uma das opções: "))
             if (self.opcao == 1):
@@ -57,10 +57,10 @@ class Menu:
 
     def menu_modo_emergencia(self):
         while True:
-            print("===== MODO EMERGÊNCIA =====\n\n")
-            print("1 - Todos cruzamentos\n")
-            print("2 - Cruzamentos 1 e 2\n")
-            print("3 - Cruzamentos 3 e 4\n")
+            print("===== MODO EMERGÊNCIA =====\n")
+            print("1 - Todos cruzamentos")
+            print("2 - Cruzamentos 1 e 2")
+            print("3 - Cruzamentos 3 e 4")
             print("4 - Voltar\n")
             self.opcao = int(input("Selecione uma das opções: "))
             if (self.opcao == 1):
@@ -80,7 +80,7 @@ class Menu:
     
     def desativar_modo_noturno(self):
         while True:
-            print("Desativar modo noturno\n")
+            print("Desativar modo noturno?")
             print("1 - Sim\n")
             opcao_destivar = int(input(""))
             if (opcao_destivar == 1):
@@ -89,7 +89,7 @@ class Menu:
 
     def desativar_modo_emergencia(self):
         while True:
-            print("Desativar modo de emergência\n")
+            print("Desativar modo de emergência?")
             print("1 - Sim\n")
             opcao_destivar = int(input(""))
             if (opcao_destivar == 1):
@@ -97,8 +97,8 @@ class Menu:
                 self.menu_modo_noturno()
 
     def painel_monitoramento(self):
-        print("Selecione a opção:\n\n")
-        print("1 - Voltar para o Menu\n")
+        print("===== MONITORAMENTO =====\n")
+        print("1 - Para sair do monitoramento\n")
         mensagem.acionar_monitoramento(1)
 
         while True:
