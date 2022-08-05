@@ -14,10 +14,10 @@ def set_up_gpio(cruzamento):
     GPIO.setup(cruzamento['botao_pedestre2'], GPIO.IN, pull_up_down=GPIO.PUD_UP)
     GPIO.setup(cruzamento['sensor_passagem1'], GPIO.IN, pull_up_down=GPIO.PUD_UP)
     GPIO.setup(cruzamento['sensor_passagem2'], GPIO.IN, pull_up_down=GPIO.PUD_UP)
-    GPIO.setup(cruzamento['sensor_velocidade_1a'], GPIO.IN, pull_up_down=GPIO.PUD_UP)
-    GPIO.setup(cruzamento['sensor_velocidade_1b'], GPIO.IN, pull_up_down=GPIO.PUD_UP)
-    GPIO.setup(cruzamento['sensor_velocidade_2a'], GPIO.IN, pull_up_down=GPIO.PUD_UP)
-    GPIO.setup(cruzamento['sensor_velocidade_2b'], GPIO.IN, pull_up_down=GPIO.PUD_UP)
+    GPIO.setup(cruzamento['sensor_velocidade_1a'], GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+    GPIO.setup(cruzamento['sensor_velocidade_1b'], GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+    GPIO.setup(cruzamento['sensor_velocidade_2a'], GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+    GPIO.setup(cruzamento['sensor_velocidade_2b'], GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 def fechar_semaforo(cruzamento):
     # via principal
